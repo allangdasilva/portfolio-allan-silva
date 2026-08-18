@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #fafafa;
+  --color-secondary: #060606;
+  --color-tertiary: #0b021e
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-outfit-sans);
+  --font-serif: var(--font-stix-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility type-xs {
+  font-size: clamp(0.625rem, 1.17vw, 0.875rem);
+  line-height: 1.4
+}
+@utility type-sm {
+  font-size: clamp(0.75rem, 1.4vw, 1rem);
+  line-height: 1.5
+}
+@utility type-base {
+  font-size: clamp(1rem, 1.87vw, 1.5rem);
+  line-height: 1.2
+}
+@utility type-lg {
+  font-size: clamp(1.0625rem, 1.99vw, 1.75rem);
+  line-height: 1.3
+}
+@utility type-xl {
+  font-size: clamp(1.5rem, 2.8vw, 2.75rem);
+  line-height: 1.1
+}
+@utility type-2xl {
+  font-size: clamp(1.75rem, 3.28vw, 4rem);
+  line-height: 1.1
+}
+@utility type-3xl {
+  font-size: clamp(2rem, 3.75vw, 6.5rem);
+  line-height: 1.1
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-primary);
+  color: var(--color-secondary);
   font-family: Arial, Helvetica, sans-serif;
 }
