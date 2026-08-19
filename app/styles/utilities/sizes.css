@@ -1,0 +1,3 @@
+@utility max-w-component {
+  @apply max-w-384 mx-auto;
+}
