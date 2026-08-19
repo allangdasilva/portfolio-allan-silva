@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="bg-tertiary text-primary p-base flex min-h-dvh">
+    <div className="bg-tertiary text-primary p-base sticky top-0 flex min-h-dvh">
       <div className="max-w-384 relative mx-auto flex w-full flex-1 flex-col justify-between">
         <header className="z-1 relative">
           <h1 className="type-xl flex flex-col gap-1 lg:gap-2">
