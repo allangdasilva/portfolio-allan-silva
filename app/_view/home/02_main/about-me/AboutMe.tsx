@@ -4,7 +4,7 @@ export default function AboutMe() {
   const copy = aboutMeCopy;
 
   return (
-    <div className="bg-primary text-secondary px-base lg:py-31 relative py-24">
+    <section className="bg-primary text-secondary px-base lg:py-31 relative py-24">
       <div className="max-w-component gap-x-base grid grid-cols-4 gap-y-3 lg:grid-cols-12">
         <div className="col-span-full col-start-3 lg:col-start-8 lg:justify-self-end">
           <h2 className="type-base font-serif italic">
@@ -20,6 +20,6 @@ export default function AboutMe() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
