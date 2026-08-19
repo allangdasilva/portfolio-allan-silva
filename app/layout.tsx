@@ -1,31 +1,32 @@
-import type { Metadata } from "next";
-import { Outfit, STIX_Two_Text } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Outfit, STIX_Two_Text } from 'next/font/google';
+import './globals.css';
 
 const outfitSans = Outfit({
-  variable: "--font-outfit-sans",
-  subsets: ["latin"],
-  display: "swap"
+  variable: '--font-outfit-sans',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const stixTwoTextSerif = STIX_Two_Text({
-  variable: "--font-stix-serif",
-  subsets: ["latin"],
-  display: "swap"
+  variable: '--font-stix-serif',
+  subsets: ['latin'],
+  style: 'italic',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Allan Silva — Desenvolvedor Front-End & UX/UI Designer",
-  description: "Portfolio de Allan Silva - Dev Front-end & UX/UI Designer.",
+  title: 'Allan Silva — Desenvolvedor Front-End & UX/UI Designer',
+  description: 'Portfolio de Allan Silva - Dev Front-end & UX/UI Designer.',
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="pt-BR"
       className={`${outfitSans.variable} ${stixTwoTextSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
