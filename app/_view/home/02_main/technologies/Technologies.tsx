@@ -16,7 +16,7 @@ export default function Technologies() {
             {copy.map((current, index) => (
               <li
                 key={index}
-                className="type-2xl after:bg-secondary relative col-span-full py-4 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-[calc(100%+32px)] first:pt-0 lg:col-start-7 lg:py-6 lg:even:col-start-6"
+                className="type-2xl after:border-secondary relative col-span-full py-4 after:absolute after:left-0 after:top-0 after:h-full after:w-[calc(100%+32px)] after:border-b-2 first:pt-0 lg:col-start-7 lg:py-6 lg:even:col-start-6"
               >
                 {current}
               </li>
