@@ -1,8 +1,11 @@
 export default function Header() {
   return (
-    <header className="fixed left-0 top-0 w-full">
-      <div className="flex items-center justify-end pr-6 pt-6">
-        <button type="button" className="type-xl text-primary">
+    <header className="p-base pointer-events-none fixed inset-x-0 top-0 z-10">
+      <div className="max-w-384 mx-auto flex w-full justify-end">
+        <button
+          type="button"
+          className="type-xl text-primary pointer-events-auto cursor-pointer mix-blend-difference"
+        >
           Menu
         </button>
       </div>
