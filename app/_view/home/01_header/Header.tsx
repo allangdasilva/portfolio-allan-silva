@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="p-base pointer-events-none fixed inset-x-0 top-0 z-10">
+    <header className="p-base pointer-events-none fixed inset-x-0 top-0 z-10 mix-blend-difference">
       <div className="max-w-384 mx-auto flex w-full justify-end">
         <button
           type="button"
