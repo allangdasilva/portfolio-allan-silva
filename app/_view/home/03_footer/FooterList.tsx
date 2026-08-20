@@ -11,9 +11,9 @@ interface Props {
 
 export default function FooterList({ copy }: Props) {
   return (
-    <ul className="flex flex-col gap-y-3 lg:gap-y-4">
+    <ul className="flex flex-col items-end gap-y-3 lg:gap-y-4">
       {copy.map(({ href, title, icon: Icon }, index) => (
-        <li key={index}>
+        <li key={index} className="w-fit">
           <a
             href={href}
             target="_blank"
