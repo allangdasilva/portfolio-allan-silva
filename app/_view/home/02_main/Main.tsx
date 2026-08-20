@@ -7,7 +7,7 @@ import Technologies from './technologies/Technologies';
 
 export default function Main() {
   return (
-    <main>
+    <main className="z-1 relative mb-[100dvh]">
       <Hero />
       <AboutMe />
       <Portfolio />

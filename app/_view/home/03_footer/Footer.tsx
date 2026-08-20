@@ -7,15 +7,16 @@ export default function Footer() {
   const socialCopy = footerSocialCopy;
 
   return (
-    <footer className="bg-tertiary px-base text-primary relative flex min-h-dvh pb-6 pt-16 lg:pt-24">
-      <div className="max-w-component  flex flex-1 flex-col justify-between">
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-y-4 lg:gap-y-6">
-            <AllanCodingLogo />
-            <span className="type-xs opacity-50">© 2026 Allan Silva</span>
-          </div>
+    <footer className="bg-tertiary px-base text-primary fixed left-0 top-0 z-0 flex min-h-dvh w-full ">
+      <div className="max-w-component relative flex flex-1 flex-col justify-between pb-6 pt-16 lg:pt-24">
+        <div className="top-base absolute">
+          <AllanCodingLogo />
+        </div>
 
-          <div className="flex flex-col gap-y-5 lg:gap-y-8">
+        <div className="flex justify-between">
+          <span className="type-xs opacity-50">© 2026 Allan Silva</span>
+
+          <div className="flex flex-col items-end gap-y-5 lg:gap-y-8">
             <FooterList copy={contactCopy} />
             <FooterList copy={socialCopy} />
           </div>

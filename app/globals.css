@@ -17,6 +17,7 @@
   --color-tertiary: var(--color-tertiary);
 
   --spacing-base: clamp(12px, 1.4vw, 24px);
+  --spacing-type-xl: clamp(1.75rem, 3vw, 3rem);
 
   --breakpoint-lg: 58rem;
 }
