@@ -11,8 +11,8 @@
   line-height: clamp(1.5rem, 2.2vw, 1.75rem);
 }
 @utility type-lg {
-  font-size: clamp(1.0625rem, 1.99vw, 1.75rem);
-  line-height: clamp(1.5rem, 2.1vw, 2rem);
+  font-size: clamp(1.0625rem, 2.2vw, 1.75rem);
+  line-height: clamp(1.5rem, 2.3vw, 2rem);
 }
 @utility type-xl {
   font-size: clamp(1.5rem, 2.8vw, 2.75rem);
