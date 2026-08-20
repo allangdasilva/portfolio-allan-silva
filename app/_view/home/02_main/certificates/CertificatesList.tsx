@@ -13,9 +13,11 @@ interface Props {
 
 export default function CertificatesList({ copy, isLeft }: Props) {
   return (
-    <ul className="flex flex-col gap-y-3 lg:gap-y-4">
+    <ul
+      className={`flex flex-col gap-y-3 lg:gap-y-4 ${!isLeft && 'items-end'}`}
+    >
       {copy.map(({ hours, title, href, isCompleted }, index) => (
-        <li key={index}>
+        <li key={index} className="w-fit">
           <a
             href={href}
             className={`text-secondary type-lg flex items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'} ${!isCompleted && 'pointer-events-none opacity-50'}`}

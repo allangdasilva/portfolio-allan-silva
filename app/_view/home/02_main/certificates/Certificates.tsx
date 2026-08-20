@@ -22,7 +22,7 @@ export default function Certificates() {
 
         <CertificatesBanner className="relative col-span-full mb-6 flex items-center justify-center lg:col-start-4 lg:col-end-10 lg:row-start-2 lg:mb-0" />
 
-        <div className="col-span-full w-full place-self-end lg:col-start-10 lg:self-center">
+        <div className="col-span-full place-self-end lg:col-start-10 lg:self-center">
           <CertificatesList copy={copyRight} />
         </div>
       </div>
