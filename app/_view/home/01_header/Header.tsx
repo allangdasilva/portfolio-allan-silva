@@ -4,7 +4,7 @@ export default function Header() {
       <div className="max-w-component flex w-full justify-end">
         <button
           type="button"
-          className="type-xl text-primary pointer-events-auto cursor-pointer mix-blend-difference"
+          className="type-xl text-primary pointer-events-auto cursor-pointer"
         >
           Menu
         </button>

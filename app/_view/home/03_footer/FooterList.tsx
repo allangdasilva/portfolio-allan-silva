@@ -1,5 +1,4 @@
 import ExternalLinkSvg from '@/app/_components/svgs/ExternalLinkSvg';
-import React from 'react';
 
 interface Props {
   copy: {
@@ -13,14 +12,14 @@ export default function FooterList({ copy }: Props) {
   return (
     <ul className="flex flex-col items-end gap-y-3 lg:gap-y-4">
       {copy.map(({ href, title, icon: Icon }, index) => (
-        <li key={index} className="w-fit">
+        <li key={index}>
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="type-lg flex items-start justify-end gap-x-1 lg:gap-x-2"
+            className="flex w-fit items-start justify-end gap-x-1 lg:gap-x-2"
           >
-            {title}
+            <span className="type-lg text-primary">{title}</span>
             {Icon ? <Icon /> : <ExternalLinkSvg />}
           </a>
         </li>

@@ -17,22 +17,28 @@ export default function CertificatesList({ copy, isLeft }: Props) {
       className={`flex flex-col gap-y-3 lg:gap-y-4 ${!isLeft && 'items-end'}`}
     >
       {copy.map(({ hours, title, href, isCompleted }, index) => (
-        <li key={index} className="w-fit">
+        <li key={index}>
           <a
             href={href}
-            className={`text-secondary type-lg flex items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'} ${!isCompleted && 'pointer-events-none opacity-50'}`}
+            className={`flex max-w-fit items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'} ${!isCompleted && 'pointer-events-none opacity-50'}`}
             aria-label={`Baixar certificado de ${title}`}
-            download={isCompleted && `Certificado-${title}.pdf`}
+            download={isCompleted && `Certificado ${title}.pdf`}
           >
             {isLeft ? (
+              // left
               <React.Fragment>
-                {hours}h, {title}
+                <span className="text-secondary type-lg">
+                  {hours}h, {title}
+                </span>
                 <DownloadSvg />
               </React.Fragment>
             ) : (
+              // right
               <React.Fragment>
                 <DownloadSvg />
-                {title}, {hours}h
+                <span className="text-secondary type-lg">
+                  {title}, {hours}h
+                </span>
               </React.Fragment>
             )}
           </a>

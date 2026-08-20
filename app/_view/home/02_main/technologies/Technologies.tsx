@@ -1,24 +1,30 @@
+import TitleSection from '@/app/_components/common/TitleSection';
 import { technologiesCopy } from '@/app/data/technologies';
 
 export default function Technologies() {
   const copy = technologiesCopy;
 
   return (
-    <section className="bg-primary text-secondary lg:py-31 relative py-24">
+    <section className="bg-primary lg:py-31 relative py-24">
+      {/* wrapper grid/px-base */}
       <div className="gap-x-base px-base grid grid-cols-4 gap-y-3 overflow-hidden lg:grid-cols-12 lg:gap-y-0">
+        {/* title max-w/lg:row-start-1 */}
         <div className="max-w-component col-span-full col-start-3 w-full lg:col-start-1 lg:row-start-1">
-          <h2 className="type-base font-serif italic">
-            <span>“</span> Tecnologias
-          </h2>
+          <TitleSection className="type-base text-secondary">
+            Tecnologias
+          </TitleSection>
         </div>
+
+        {/* list lg:row-start-1 */}
         <div className="col-span-full lg:row-start-1">
           <ul className="gap-x-base grid grid-cols-4 lg:grid-cols-12">
             {copy.map((current, index) => (
               <li
                 key={index}
-                className="type-2xl after:border-secondary relative col-span-full py-4 after:absolute after:left-0 after:top-0 after:h-full after:w-[calc(100%+32px)] after:border-b-2 first:pt-0 lg:col-start-7 lg:py-6 lg:even:col-start-6"
+                className="relative col-span-full py-4 first:pt-0 lg:col-start-7 lg:py-6 lg:even:col-start-6"
               >
-                {current}
+                <span className="border-secondary absolute left-0 top-0 h-full w-[calc(100%+32px)] border-b-2"></span>
+                <span className="type-2xl text-secondary">{current}</span>
               </li>
             ))}
           </ul>
