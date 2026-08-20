@@ -4,6 +4,7 @@ import React from 'react';
 interface Props {
   copy: {
     title: string;
+    href: string | undefined;
     hours: number;
     isCompleted: boolean;
   }[];
@@ -13,21 +14,23 @@ interface Props {
 export default function CertificatesList({ copy, isLeft }: Props) {
   return (
     <ul className="flex flex-col gap-y-3 lg:gap-y-4">
-      {copy.map((current, index) => (
+      {copy.map(({ hours, title, href, isCompleted }, index) => (
         <li key={index}>
           <a
-            href="#"
-            className={`text-secondary type-lg flex items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'}`}
+            href={href}
+            className={`text-secondary type-lg flex items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'} ${!isCompleted && 'pointer-events-none opacity-50'}`}
+            aria-label={`Baixar certificado de ${title}`}
+            download={isCompleted && `Certificado-${title}.pdf`}
           >
             {isLeft ? (
               <React.Fragment>
-                {current.hours}h, {current.title}
+                {hours}h, {title}
                 <DownloadSvg />
               </React.Fragment>
             ) : (
               <React.Fragment>
                 <DownloadSvg />
-                {current.title}, {current.hours}h
+                {title}, {hours}h
               </React.Fragment>
             )}
           </a>
