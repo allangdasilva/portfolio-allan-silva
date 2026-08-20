@@ -46,7 +46,7 @@ export default function PortfolioCard({ card }: Props) {
             {stack.map((current, index) => (
               <span
                 key={index}
-                className="border-primary whitespace-nowrap rounded-full border px-2"
+                className="type-sm border-primary whitespace-nowrap rounded-full border px-2"
               >
                 {current}
               </span>

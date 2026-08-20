@@ -6,7 +6,7 @@ export default function DownloadSvg() {
       viewBox="0 0 12 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="max-w-1.75 h-auto w-full lg:max-w-3"
+      className="h-auto w-2 lg:w-3"
     >
       <g clipPath="url(#clip0_88_151)">
         <path
