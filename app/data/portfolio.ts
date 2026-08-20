@@ -14,6 +14,7 @@ export const portfolioCopy = [
   {
     id: 1,
     title: 'Dogs',
+    href: 'https://react-dogs-steel.vercel.app/',
     description:
       'Aplicação reestruturada  do projeto “Rede Social Dogs” do curso da Origamid, adaptando para os padrões mais práticos atuais.',
     stack: [
@@ -38,6 +39,7 @@ export const portfolioCopy = [
   {
     id: 2,
     title: 'Planejai',
+    href: 'https://planejai-three.vercel.app/',
     description:
       'Uma aplicação de planejamento financeiro que ajuda o usuário a simular metas e entender o impacto das despesas.',
     stack: [
@@ -57,6 +59,7 @@ export const portfolioCopy = [
   {
     id: 3,
     title: 'Kanban',
+    href: 'https://react-kanban-app-seven.vercel.app/',
     description:
       'Aplicação para gerenciar tarefas do dia a dia. Kanban interativo que exibe o andamento e o fluxo dos seus deveres',
     stack: ['React', 'TypeScript', 'Tailwind', 'Zustand', 'Zod', 'Figma'],

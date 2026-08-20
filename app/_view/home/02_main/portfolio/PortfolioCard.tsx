@@ -5,6 +5,7 @@ interface Props {
   card: {
     id: number;
     title: string;
+    href: string;
     description: string;
     stack: string[];
     image: ImageProps;
@@ -14,13 +15,19 @@ interface Props {
 export default function PortfolioCard({ card }: Props) {
   const {
     title,
+    href,
     description,
     stack,
     image: { src, alt, width, height },
   } = card;
 
   return (
-    <div className="px-base sticky top-0 min-h-dvh pt-12">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-base sticky top-0 block min-h-dvh pt-12"
+    >
       <div className="z-1 absolute inset-0">
         <Image
           src={src}
@@ -54,6 +61,6 @@ export default function PortfolioCard({ card }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
