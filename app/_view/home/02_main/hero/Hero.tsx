@@ -16,7 +16,7 @@ export default function Hero() {
     hidden: (direction: number) => ({
       opacity: 0,
       y: direction,
-      transition: { duration: 0.5, ease: 'easeInOut' },
+      transition: { duration: 0.5, ease: 'easeIn' },
     }),
   };
 
