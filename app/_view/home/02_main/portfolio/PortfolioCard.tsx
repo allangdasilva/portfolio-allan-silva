@@ -1,4 +1,5 @@
 import TextBody from '@/app/_components/common/TextBody';
+import TextFade from '@/app/_components/motion/TextFade';
 import { ImageProps } from '@/app/data/portfolio';
 import Image from 'next/image';
 
@@ -47,23 +48,27 @@ export default function PortfolioCard({ card }: Props) {
         {/* card title/description */}
         <div className="gap-x-base grid grid-cols-4 gap-y-2 lg:grid-cols-12 lg:gap-y-3">
           <div className="col-span-full">
-            <h3 className="type-xl text-primary">{title}</h3>
+            <TextFade direction="up">
+              <h3 className="type-xl text-primary">{title}</h3>
+            </TextFade>
           </div>
           <div className="col-span-full lg:col-end-8">
-            <TextBody className="text-primary">{description}</TextBody>
+            <TextFade direction="up">
+              <TextBody className="text-primary">{description}</TextBody>
+            </TextFade>
           </div>
         </div>
 
         {/* stacks */}
+
         <div className="gap-x-base grid grid-cols-4 lg:grid-cols-12">
           <div className="col-span-full flex flex-wrap gap-x-1 gap-y-2 lg:col-end-8 lg:gap-x-2 lg:gap-y-3">
             {stack.map((current, index) => (
-              <span
-                key={index}
-                className="type-sm border-primary text-primary whitespace-nowrap rounded-full border px-2 py-0.5"
-              >
-                {current}
-              </span>
+              <TextFade key={index} direction="up">
+                <span className="type-sm border-primary text-primary whitespace-nowrap rounded-full border px-2 py-0.5">
+                  {current}
+                </span>
+              </TextFade>
             ))}
           </div>
         </div>

@@ -1,4 +1,5 @@
 import TitleSection from '@/app/_components/common/TitleSection';
+import TextFade from '@/app/_components/motion/TextFade';
 import { technologiesCopy } from '@/app/data/technologies';
 
 export default function Technologies() {
@@ -10,9 +11,11 @@ export default function Technologies() {
       <div className="gap-x-base px-base grid grid-cols-4 gap-y-3 overflow-hidden lg:grid-cols-12 lg:gap-y-0">
         {/* title max-w/lg:row-start-1 */}
         <div className="max-w-component col-span-full col-start-3 w-full lg:col-start-1 lg:row-start-1">
-          <TitleSection className="type-base text-secondary">
-            Tecnologias
-          </TitleSection>
+          <TextFade direction="up">
+            <TitleSection className="type-base text-secondary">
+              Tecnologias
+            </TitleSection>
+          </TextFade>
         </div>
 
         {/* list lg:row-start-1 */}
@@ -24,7 +27,9 @@ export default function Technologies() {
                 className="relative col-span-full py-4 first:pt-0 lg:col-start-7 lg:py-6 lg:even:col-start-6"
               >
                 <span className="border-secondary absolute left-0 top-0 h-full w-[calc(100%+32px)] border-b-2"></span>
-                <span className="type-2xl text-secondary">{current}</span>
+                <TextFade direction="up">
+                  <span className="type-2xl text-secondary">{current}</span>
+                </TextFade>
               </li>
             ))}
           </ul>

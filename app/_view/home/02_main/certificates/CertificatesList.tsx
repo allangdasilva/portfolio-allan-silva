@@ -1,3 +1,4 @@
+import TextFade from '@/app/_components/motion/TextFade';
 import DownloadSvg from '@/app/_components/svgs/DownloadSvg';
 import React from 'react';
 
@@ -24,23 +25,25 @@ export default function CertificatesList({ copy, isLeft }: Props) {
             aria-label={`Baixar certificado de ${title}`}
             download={isCompleted && `Certificado ${title}.pdf`}
           >
-            {isLeft ? (
-              // left
-              <React.Fragment>
-                <span className="text-secondary type-lg">
-                  {hours}h, {title}
-                </span>
-                <DownloadSvg />
-              </React.Fragment>
-            ) : (
-              // right
-              <React.Fragment>
-                <DownloadSvg />
-                <span className="text-secondary type-lg">
-                  {title}, {hours}h
-                </span>
-              </React.Fragment>
-            )}
+            <TextFade direction="up">
+              {isLeft ? (
+                // left
+                <React.Fragment>
+                  <span className="text-secondary type-lg">
+                    {hours}h, {title}
+                  </span>
+                  <DownloadSvg />
+                </React.Fragment>
+              ) : (
+                // right
+                <React.Fragment>
+                  <DownloadSvg />
+                  <span className="text-secondary type-lg">
+                    {title}, {hours}h
+                  </span>
+                </React.Fragment>
+              )}
+            </TextFade>
           </a>
         </li>
       ))}

@@ -1,4 +1,5 @@
 import TitleSection from '@/app/_components/common/TitleSection';
+import TextFade from '@/app/_components/motion/TextFade';
 import { portfolioCopy } from '@/app/data/portfolio';
 import PortfolioCard from './PortfolioCard';
 
@@ -10,9 +11,11 @@ export default function Portfolio() {
       {/* title */}
       <div className="px-base gap-x-base grid grid-cols-4 py-4 lg:grid-cols-12 lg:py-6">
         <div className="col-span-full col-start-3 lg:col-start-7">
-          <TitleSection className="text-secondary type-3xl">
-            Portfólio
-          </TitleSection>
+          <TextFade direction="up">
+            <TitleSection className="text-secondary type-3xl">
+              Portfólio
+            </TitleSection>
+          </TextFade>
         </div>
       </div>
 
