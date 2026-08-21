@@ -7,13 +7,15 @@ import { useEffect, useState } from 'react';
 import bannerAllan from '@/app/images/banner-allan-coding.svg';
 
 const BANNER_WIDTH = 1689;
+const GAP_WIDTH = 64;
+const TOTAL_UNIT_WIDTH = BANNER_WIDTH + GAP_WIDTH;
 
 export default function Banner() {
   const [bannerCopies, setBannerCopies] = useState(2);
 
   useEffect(() => {
     const updateBannerCopies = () => {
-      setBannerCopies(Math.ceil(window.innerWidth / BANNER_WIDTH) + 2);
+      setBannerCopies(Math.ceil(window.innerWidth / TOTAL_UNIT_WIDTH) + 2);
     };
 
     updateBannerCopies();
@@ -28,10 +30,14 @@ export default function Banner() {
       aria-hidden="true"
     >
       <motion.div
-        className="flex w-max gap-x-20"
+        className="flex w-max gap-16"
         initial={{ x: 0 }}
-        animate={{ x: -BANNER_WIDTH }}
-        transition={{ duration: 20, ease: 'linear', repeat: Infinity }}
+        animate={{ x: -TOTAL_UNIT_WIDTH }}
+        transition={{
+          duration: 20,
+          ease: 'linear',
+          repeat: Infinity,
+        }}
       >
         {Array.from({ length: bannerCopies }, (_, index) => (
           <Image
