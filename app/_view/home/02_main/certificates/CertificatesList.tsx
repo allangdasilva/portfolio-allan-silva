@@ -21,11 +21,14 @@ export default function CertificatesList({ copy, isLeft }: Props) {
         <li key={index}>
           <a
             href={href}
-            className={`flex max-w-fit items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'} ${!isCompleted && 'pointer-events-none opacity-50'}`}
+            className={`${!isCompleted && 'pointer-events-none opacity-50'}`}
             aria-label={`Baixar certificado de ${title}`}
             download={isCompleted && `Certificado ${title}.pdf`}
           >
-            <TextFade direction="up">
+            <TextFade
+              direction="up"
+              className={`flex max-w-fit items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'}`}
+            >
               {isLeft ? (
                 // left
                 <React.Fragment>

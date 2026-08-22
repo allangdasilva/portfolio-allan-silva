@@ -20,9 +20,13 @@ export default function Portfolio() {
       </div>
 
       {/* cards */}
-      <div className="col-span-full ">
-        {copy.map((current) => (
-          <PortfolioCard key={current.id} card={current} />
+      <div className="relative col-span-full">
+        {copy.map((current, index) => (
+          <PortfolioCard
+            key={current.id}
+            card={current}
+            isLast={copy.length === index + 1}
+          />
         ))}
       </div>
     </section>
