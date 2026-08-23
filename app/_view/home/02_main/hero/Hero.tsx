@@ -56,7 +56,7 @@ export default function Hero() {
         </header>
 
         {/* banner */}
-        <div className="absolute inset-0 top-1/2 z-0 h-full -translate-y-1/2 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 top-1/2 z-0 h-full -translate-y-1/2 overflow-hidden">
           <HeroBanner hasScrolled={hasScrolled} />
         </div>
 
