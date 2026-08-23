@@ -11,6 +11,7 @@ const outfitSans = Outfit({
 const stixTwoTextSerif = STIX_Two_Text({
   variable: '--font-stix-serif',
   subsets: ['latin'],
+  style: 'italic',
   display: 'swap',
 });
 
