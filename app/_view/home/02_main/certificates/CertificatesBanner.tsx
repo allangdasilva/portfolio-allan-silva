@@ -1,4 +1,4 @@
-import highlightBg from '@/app/images/bg-noise.jpg';
+import highlightBg from '@/app/images/highlight-bg.webp';
 import highlight from '@/app/images/highlight.webp';
 
 export default function CertificatesBanner({
