@@ -1,21 +1,23 @@
 'use client';
 
+import bgNoise from '@/app/images/bg-noise.jpg';
 import { motion, useMotionValueEvent, useScroll, Variants } from 'motion/react';
 import { useState } from 'react';
+import HeroBanner from './HeroBanner';
 
 export default function Hero() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const { scrollY } = useScroll();
 
-  const FADE_UP: Variants = {
+  const FADE_TEXT: Variants = {
     show: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.5, ease: 'easeInOut' },
     },
-    hidden: (direction: number) => ({
+    hidden: (y: number) => ({
       opacity: 0,
-      y: direction,
+      y,
       transition: { duration: 0.5, ease: 'easeIn' },
     }),
   };
@@ -29,13 +31,20 @@ export default function Hero() {
   });
 
   return (
-    <section className="bg-tertiary text-primary p-base sticky top-0 flex min-h-dvh">
+    <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-dvh">
+      {/* noise */}
+      <div
+        aria-hidden="true"
+        style={{ backgroundImage: `url(${bgNoise.src})` }}
+        className="bg-size-[300px_auto] absolute inset-0 h-full w-full bg-repeat"
+      ></div>
+
       {/* wrapper max-w */}
       <div className="max-w-component relative flex w-full flex-1 flex-col justify-between">
         {/* header */}
         <header className="z-1 relative">
           <motion.h1
-            variants={FADE_UP}
+            variants={FADE_TEXT}
             initial={'show'}
             animate={hasScrolled ? 'hidden' : 'show'}
             custom={-18}
@@ -47,14 +56,14 @@ export default function Hero() {
         </header>
 
         {/* banner */}
-        <div className="absolute top-1/2 z-0 grid w-full -translate-y-1/2">
-          <div className="max-w-133.5 h-75 w-full place-self-center bg-red-500 "></div>
+        <div className="absolute inset-0 top-1/2 z-0 h-full -translate-y-1/2 overflow-hidden">
+          <HeroBanner hasScrolled={hasScrolled} />
         </div>
 
         {/* high-light */}
         <div className="z-1 relative">
           <motion.p
-            variants={FADE_UP}
+            variants={FADE_TEXT}
             initial={'show'}
             animate={hasScrolled ? 'hidden' : 'show'}
             custom={18}
