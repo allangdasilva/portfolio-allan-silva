@@ -1,4 +1,4 @@
-import highlightBg from '@/app/images/highlight-bg.webp';
+import highlightBg from '@/app/images/bg-noise.jpg';
 import highlight from '@/app/images/highlight.webp';
 
 export default function CertificatesBanner({
@@ -14,7 +14,7 @@ export default function CertificatesBanner({
       {/* second image */}
       <div
         style={{ backgroundImage: `url(${highlightBg.src})` }}
-        className="z-1 max-h-4/10 bg-tertiary absolute inset-0 top-1/2 -translate-y-1/2 bg-cover bg-blend-hard-light"
+        className="z-1 max-h-4/10 bg-tertiary absolute inset-0 top-1/2 -translate-y-1/2 bg-cover"
       ></div>
     </div>
   );

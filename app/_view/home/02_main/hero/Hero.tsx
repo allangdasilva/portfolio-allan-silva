@@ -1,6 +1,6 @@
 'use client';
 
-import bgNoise from '@/app/images/bg-noise.jpg';
+import BgNoise from '@/app/_components/common/BgNoise';
 import { motion, useMotionValueEvent, useScroll, Variants } from 'motion/react';
 import { useState } from 'react';
 import HeroBanner from './HeroBanner';
@@ -33,11 +33,7 @@ export default function Hero() {
   return (
     <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-dvh">
       {/* noise */}
-      <div
-        aria-hidden="true"
-        style={{ backgroundImage: `url(${bgNoise.src})` }}
-        className="bg-size-[300px_auto] absolute inset-0 h-full w-full bg-repeat"
-      ></div>
+      <BgNoise />
 
       {/* wrapper max-w */}
       <div className="max-w-component relative flex w-full flex-1 flex-col justify-between">

@@ -1,3 +1,4 @@
+import BgNoise from '@/app/_components/common/BgNoise';
 import AllanCodingLogo from '@/app/_components/svgs/AllanCodingLogoSvg';
 import { footerContactCopy, footerSocialCopy } from '@/app/data/footer';
 import FooterList from './FooterList';
@@ -8,6 +9,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-tertiary px-base fixed left-0 top-0 z-0 flex min-h-dvh w-full ">
+      {/* noise */}
+      <BgNoise />
+
       {/* wrapper max-w */}
       <div className="max-w-component relative flex flex-1 flex-col justify-between pb-6 pt-16 lg:pt-24">
         {/* logo */}
