@@ -13,7 +13,7 @@ export default function Portfolio() {
         <div className="col-span-full col-start-3 lg:col-start-7">
           <TextFade direction="up">
             <TitleSection className="text-secondary type-3xl">
-              Portfólio
+              Portfolio
             </TitleSection>
           </TextFade>
         </div>
