@@ -3,7 +3,7 @@ export default function TitleSection({
   ...props
 }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <h2 className={`font-serif italic ${props.className}`}>
+    <h2 className={`font-serif ${props.className}`}>
       <span aria-hidden>“</span> {children}
     </h2>
   );
