@@ -20,13 +20,16 @@ export default function AboutMe() {
         </div>
 
         {/* description */}
-        <div className="col-span-full col-start-1 flex flex-col gap-y-3 lg:col-end-8 lg:row-start-1 lg:gap-y-4">
+        <TextFade
+          direction="up"
+          className="col-span-full col-start-1 flex flex-col gap-y-3 lg:col-end-8 lg:row-start-1 lg:gap-y-4"
+        >
           {copy.map((current, index) => (
-            <TextFade key={index} direction="up">
+            <div key={index}>
               <TextBody className="text-secondary">{current}</TextBody>
-            </TextFade>
+            </div>
           ))}
-        </div>
+        </TextFade>
       </div>
     </section>
   );

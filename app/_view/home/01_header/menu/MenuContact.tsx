@@ -7,32 +7,31 @@ export default function MenuContact() {
 
   return (
     <div className="flex flex-col gap-y-4 lg:gap-y-6">
-      <div className="flex flex-col gap-y-1">
+      <TextFade direction="down" delay={0.2} className="flex flex-col gap-y-1">
         {contactCopy.map(({ name, href }, index) => (
-          <TextFade key={index} direction="up" delay={0.5 + index / 10}>
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="type-xs text-primary"
-            >
-              {name}
-            </a>
-          </TextFade>
+          <a
+            key={index}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="type-xs text-primary"
+          >
+            {name}
+          </a>
         ))}
-      </div>
+      </TextFade>
 
-      <ul className="flex gap-x-2 lg:gap-x-4">
+      <TextFade
+        direction="down"
+        delay={0.3}
+        className="flex gap-x-2 lg:gap-x-4"
+      >
         {socialCopy.map(({ icon: Icon, href }, index) => (
-          <li key={index}>
-            <TextFade direction="up" delay={0.7 + index / 10}>
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <Icon className="w-6 lg:w-8" />
-              </a>
-            </TextFade>
-          </li>
+          <a key={index} href={href} target="_blank" rel="noopener noreferrer">
+            <Icon className="w-6 lg:w-8" />
+          </a>
         ))}
-      </ul>
+      </TextFade>
     </div>
   );
 }

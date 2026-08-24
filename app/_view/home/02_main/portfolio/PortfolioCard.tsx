@@ -82,29 +82,30 @@ export default function PortfolioCard({ card, isLast }: Props) {
         >
           {/* card title/description */}
           <div className="gap-x-base grid grid-cols-4 gap-y-2 lg:grid-cols-12 lg:gap-y-3">
-            <div className="col-span-full">
-              <TextFade direction="up">
-                <h3 className="type-xl text-primary">{title}</h3>
-              </TextFade>
-            </div>
-            <div className="col-span-full lg:col-end-8">
-              <TextFade direction="up">
-                <TextBody className="text-primary">{description}</TextBody>
-              </TextFade>
-            </div>
+            <TextFade
+              direction="up"
+              className="col-span-full grid gap-y-2 lg:col-end-8 lg:gap-y-3"
+            >
+              <h3 className="type-xl text-primary">{title}</h3>
+              <TextBody className="text-primary">{description}</TextBody>
+            </TextFade>
           </div>
 
           {/* stacks */}
           <div className="gap-x-base grid grid-cols-4 lg:grid-cols-12">
-            <div className="col-span-full flex flex-wrap gap-x-1 gap-y-2 lg:col-end-8 lg:gap-x-2 lg:gap-y-3">
+            <TextFade
+              direction="up"
+              className="col-span-full flex flex-wrap gap-x-1 gap-y-2 lg:col-end-8 lg:gap-x-2 lg:gap-y-3"
+            >
               {stack.map((current, index) => (
-                <TextFade key={index} direction="up">
-                  <span className="type-sm border-primary text-primary whitespace-nowrap rounded-full border px-2 py-0.5">
-                    {current}
-                  </span>
-                </TextFade>
+                <span
+                  key={index}
+                  className="type-sm border-primary text-primary whitespace-nowrap rounded-full border px-2 py-0.5"
+                >
+                  {current}
+                </span>
               ))}
-            </div>
+            </TextFade>
           </div>
         </motion.div>
       </a>

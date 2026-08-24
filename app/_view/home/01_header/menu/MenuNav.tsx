@@ -7,19 +7,21 @@ export default function MenuNav() {
 
   return (
     <nav>
-      <ul className="flex flex-col gap-y-4 lg:gap-y-6">
+      <TextFade
+        direction="down"
+        staggerChildren={0.1}
+        className="flex flex-col gap-y-4 lg:gap-y-6"
+      >
         {copy.map(({ name, href }, index) => (
-          <li key={index}>
-            <TextFade direction="up" delay={0.2 + index / 10}>
-              <Dialog.Close asChild>
-                <a href={href} className="type-2xl text-primary uppercase">
-                  {name}
-                </a>
-              </Dialog.Close>
-            </TextFade>
-          </li>
+          <div key={index}>
+            <Dialog.Close asChild>
+              <a href={href} className="type-2xl text-primary uppercase">
+                {name}
+              </a>
+            </Dialog.Close>
+          </div>
         ))}
-      </ul>
+      </TextFade>
     </nav>
   );
 }

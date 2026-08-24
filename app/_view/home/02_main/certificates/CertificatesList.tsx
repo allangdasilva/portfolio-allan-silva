@@ -14,19 +14,19 @@ interface Props {
 
 export default function CertificatesList({ copy, isLeft }: Props) {
   return (
-    <ul
+    <TextFade
+      direction="up"
       className={`flex flex-col gap-y-3 lg:gap-y-4 ${!isLeft && 'items-end'}`}
     >
       {copy.map(({ hours, title, href, isCompleted }, index) => (
-        <li key={index}>
+        <div key={index}>
           <a
             href={href}
             className={`${!isCompleted && 'pointer-events-none opacity-50'}`}
             aria-label={`Baixar certificado de ${title}`}
             download={isCompleted && `Certificado ${title}.pdf`}
           >
-            <TextFade
-              direction="up"
+            <div
               className={`flex max-w-fit items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'}`}
             >
               {isLeft ? (
@@ -46,10 +46,10 @@ export default function CertificatesList({ copy, isLeft }: Props) {
                   </span>
                 </React.Fragment>
               )}
-            </TextFade>
+            </div>
           </a>
-        </li>
+        </div>
       ))}
-    </ul>
+    </TextFade>
   );
 }

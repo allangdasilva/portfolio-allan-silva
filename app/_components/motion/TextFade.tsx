@@ -1,10 +1,10 @@
 'use client';
 
-import { HTMLMotionProps, motion, useInView, Variants } from 'motion/react';
-import React, { useRef } from 'react';
+import { HTMLMotionProps, motion, Variants } from 'motion/react';
+import React from 'react';
 
 interface Props extends HTMLMotionProps<'div'> {
-  direction: 'up' | 'down';
+  direction?: 'up' | 'down';
   children: React.ReactNode;
   className?: string;
   staggerChildren?: number;
@@ -12,45 +12,46 @@ interface Props extends HTMLMotionProps<'div'> {
 }
 
 export default function TextFade({
-  direction,
+  direction = 'up',
   children,
   className = '',
   staggerChildren = 0.1,
   delay = 0,
+  ...props
 }: Props) {
   const FADE_DOWN: Variants = {
+    hidden: {
+      opacity: 0,
+      y: direction === 'down' ? -18 : 18,
+    },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: 'easeOut', delay: delay },
+      transition: { duration: 0.5, ease: 'easeOut' },
     },
-    hidden: { opacity: 0, y: direction === 'down' ? -18 : 18 },
     exit: {
       opacity: 0,
-      y: direction === 'down' ? -18 : 18,
-      transition: { duration: 0.5, ease: 'easeOut' },
+      transition: { duration: 0.4, ease: 'easeIn' },
     },
   };
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
+      whileInView="show"
       exit="exit"
-      animate={isInView ? 'show' : ''}
+      viewport={{ once: true, amount: 0.2 }}
       variants={{
         hidden: {},
         show: {
           transition: {
-            staggerChildren: staggerChildren,
+            staggerChildren,
+            delayChildren: delay,
           },
         },
-        exit: {},
       }}
       className={className}
+      {...props}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child) ? (
