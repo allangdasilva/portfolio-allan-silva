@@ -1,6 +1,5 @@
 'use client';
 
-import BgNoise from '@/app/_components/common/BgNoise';
 import * as Dialog from '@radix-ui/react-dialog';
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import { useState } from 'react';
@@ -45,9 +44,7 @@ export default function Menu() {
                 exit={'hidden'}
                 animate={open ? 'show' : 'hidden'}
                 className="bg-tertiary fixed inset-0 z-40"
-              >
-                <BgNoise />
-              </motion.div>
+              ></motion.div>
             </Dialog.Overlay>
 
             {/* content */}

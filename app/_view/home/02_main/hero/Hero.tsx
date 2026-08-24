@@ -1,6 +1,5 @@
 'use client';
 
-import BgNoise from '@/app/_components/common/BgNoise';
 import { motion, useMotionValueEvent, useScroll, Variants } from 'motion/react';
 import { useState } from 'react';
 import HeroBanner from './HeroBanner';
@@ -32,9 +31,6 @@ export default function Hero() {
 
   return (
     <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-dvh">
-      {/* noise */}
-      <BgNoise />
-
       {/* wrapper max-w */}
       <div className="max-w-component relative flex w-full flex-1 flex-col justify-between">
         {/* header */}
