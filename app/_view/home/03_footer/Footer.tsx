@@ -22,7 +22,7 @@ export default function Footer() {
         {/* copy / contact */}
         <div className="flex justify-between">
           <span className="type-xs text-primary opacity-50">
-            © 2026 Allan Silva
+            © 2026 Allan Coding
           </span>
 
           <div className="flex flex-col items-end gap-y-5 lg:gap-y-8">
