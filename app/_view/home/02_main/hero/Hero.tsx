@@ -38,7 +38,7 @@ export default function Hero() {
       {/* wrapper max-w */}
       <div className="max-w-component relative flex w-full flex-1 flex-col justify-between">
         {/* header */}
-        <header className="z-1 relative">
+        <header className="relative z-10">
           <motion.h1
             variants={FADE_TEXT}
             initial={'show'}
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* high-light */}
-        <div className="z-1 relative">
+        <div className="relative z-10">
           <motion.p
             variants={FADE_TEXT}
             initial={'show'}
