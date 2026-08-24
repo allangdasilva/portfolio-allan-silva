@@ -10,12 +10,14 @@ export default function Technologies() {
       {/* wrapper grid/px-base */}
       <div className="gap-x-base px-base grid grid-cols-4 gap-y-3 overflow-hidden lg:grid-cols-12 lg:gap-y-0">
         {/* title max-w/lg:row-start-1 */}
-        <div className="max-w-component col-span-full col-start-3 w-full lg:z-10 lg:col-start-1 lg:col-end-6 lg:row-start-1">
-          <TextFade direction="up">
-            <TitleSection className="type-base text-secondary">
-              Tecnologias
-            </TitleSection>
-          </TextFade>
+        <div className="max-w-component gap-x-base pointer-events-none z-10 col-span-full grid w-full grid-cols-4 lg:row-start-1">
+          <div className="col-span-full col-start-3 lg:col-start-1 lg:col-end-6">
+            <TextFade direction="up">
+              <TitleSection className="type-base text-secondary pointer-events-auto">
+                Tecnologias
+              </TitleSection>
+            </TextFade>
+          </div>
         </div>
 
         {/* list lg:row-start-1 */}
