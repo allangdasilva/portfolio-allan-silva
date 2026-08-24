@@ -13,7 +13,7 @@ export default function Footer() {
       <BgNoise />
 
       {/* wrapper max-w */}
-      <div className="max-w-component relative flex flex-1 flex-col justify-between pb-6 pt-16 lg:pt-24">
+      <div className="max-w-component relative flex flex-1 flex-col justify-between pb-6 pt-[calc((var(--spacing-base)*2)+var(--spacing-type-xl)+4px)]">
         {/* logo */}
         <div className="top-base absolute">
           <AllanCodingLogo />
