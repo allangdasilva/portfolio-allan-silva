@@ -1,10 +1,11 @@
 import ExternalLinkSvg from '@/app/_components/svgs/ExternalLinkSvg';
+import React, { SVGProps } from 'react';
 
 interface Props {
   copy: {
     href: string;
     title: string;
-    icon?: () => React.JSX.Element;
+    icon?: ({ ...props }: SVGProps<SVGSVGElement>) => React.JSX.Element;
   }[];
 }
 
@@ -20,7 +21,7 @@ export default function FooterList({ copy }: Props) {
             className="flex w-fit items-start justify-end gap-x-1 lg:gap-x-2"
           >
             <span className="type-lg text-primary">{title}</span>
-            {Icon ? <Icon /> : <ExternalLinkSvg />}
+            {Icon ? <Icon className="w-2 lg:w-3" /> : <ExternalLinkSvg />}
           </a>
         </li>
       ))}

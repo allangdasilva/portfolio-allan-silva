@@ -7,7 +7,7 @@ export default function AboutMe() {
   const copy = aboutMeCopy;
 
   return (
-    <section className="bg-primary px-base lg:py-31 relative py-24">
+    <section id="about" className="bg-primary px-base lg:py-31 relative py-24">
       {/* wrapper max-w */}
       <div className="max-w-component gap-x-base grid grid-cols-4 gap-y-3 lg:grid-cols-12 lg:gap-y-0">
         {/* title */}

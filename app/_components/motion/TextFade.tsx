@@ -8,6 +8,7 @@ interface Props extends HTMLMotionProps<'div'> {
   children: React.ReactNode;
   className?: string;
   staggerChildren?: number;
+  delay?: number;
 }
 
 export default function TextFade({
@@ -15,10 +16,20 @@ export default function TextFade({
   children,
   className = '',
   staggerChildren = 0.1,
+  delay = 0,
 }: Props) {
   const FADE_DOWN: Variants = {
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut', delay: delay },
+    },
     hidden: { opacity: 0, y: direction === 'down' ? -18 : 18 },
+    exit: {
+      opacity: 0,
+      y: direction === 'down' ? -18 : 18,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
   };
 
   const ref = useRef(null);
@@ -28,6 +39,7 @@ export default function TextFade({
     <motion.div
       ref={ref}
       initial="hidden"
+      exit="exit"
       animate={isInView ? 'show' : ''}
       variants={{
         hidden: {},
@@ -36,6 +48,7 @@ export default function TextFade({
             staggerChildren: staggerChildren,
           },
         },
+        exit: {},
       }}
       className={className}
     >

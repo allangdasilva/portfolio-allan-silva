@@ -10,7 +10,10 @@ export default function Certificates() {
   const copyRight = certificatesCopy.slice(-half);
 
   return (
-    <section className="bg-primary px-base lg:pt-31 lg:pb-47 relative py-24">
+    <section
+      id="certificates"
+      className="bg-primary px-base lg:pt-31 lg:pb-47 relative py-24"
+    >
       {/* wrapper max-w */}
       <div className="max-w-component gap-x-base grid grid-cols-4 lg:grid-cols-12">
         {/* title */}

@@ -6,6 +6,9 @@
   --color-primary: #fafafa;
   --color-secondary: #060606;
   --color-tertiary: #0b021e;
+
+  --spacing-base: clamp(12px, 1.4vw, 24px);
+  --spacing-type-xl: clamp(1.75rem, 3vw, 3rem);
 }
 
 @theme {

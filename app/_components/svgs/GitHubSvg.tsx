@@ -1,4 +1,6 @@
-export default function GitHubSvg() {
+import { SVGProps } from 'react';
+
+export default function GitHubSvg({ ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={12}
@@ -6,7 +8,7 @@ export default function GitHubSvg() {
       viewBox="0 0 12 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-auto w-2 lg:w-3"
+      className={`h-auto ${props.className}`}
     >
       <g clipPath="url(#clip0_91_247)">
         <path

@@ -6,7 +6,7 @@ export default function Technologies() {
   const copy = technologiesCopy;
 
   return (
-    <section className="bg-primary lg:py-31 relative py-24">
+    <section id="technologies" className="bg-primary lg:py-31 relative py-24">
       {/* wrapper grid/px-base */}
       <div className="gap-x-base px-base grid grid-cols-4 gap-y-3 overflow-hidden lg:grid-cols-12 lg:gap-y-0">
         {/* title max-w/lg:row-start-1 */}

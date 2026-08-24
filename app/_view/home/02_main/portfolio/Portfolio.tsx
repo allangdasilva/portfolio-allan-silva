@@ -7,7 +7,7 @@ export default function Portfolio() {
   const copy = portfolioCopy;
 
   return (
-    <section className="bg-primary relative">
+    <section id="portfolio" className="bg-primary relative">
       {/* title */}
       <div className="px-base gap-x-base grid grid-cols-4 py-4 lg:grid-cols-12 lg:py-6">
         <div className="col-span-full col-start-3 lg:col-start-7">
