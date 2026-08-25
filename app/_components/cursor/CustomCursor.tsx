@@ -53,7 +53,7 @@ export default function CustomCursor() {
       }}
       animate={{
         scale: isHovered ? 1.5 : 1,
-        backgroundColor: isHovered ? '#FFFFFF' : 'transparent',
+        backgroundColor: isHovered ? '#FFFFFF' : '#FFFFFF00',
       }}
       transition={{ duration: 0.2 }}
     />
