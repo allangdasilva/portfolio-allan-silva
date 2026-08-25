@@ -37,7 +37,7 @@ export default function PortfolioCard({ card, isLast }: Props) {
   });
 
   const opacityOverlay = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const opacityText = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
+  const opacityText = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <React.Fragment>
