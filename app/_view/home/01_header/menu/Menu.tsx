@@ -14,11 +14,11 @@ export default function Menu() {
   const MENU_REVIEW: Variants = {
     show: {
       clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-      transition: { duration: 0.6, ease: 'easeIn' },
+      transition: { duration: 0.6, ease: 'circInOut' },
     },
     hidden: {
       clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: 'circOut' },
     },
   };
 

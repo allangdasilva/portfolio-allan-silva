@@ -1,5 +1,6 @@
 'use client';
 
+import useLoader from '@/app/_hooks/useLoader';
 import { motion, useMotionValueEvent, useScroll, Variants } from 'motion/react';
 import { useState } from 'react';
 import HeroBanner from './HeroBanner';
@@ -7,6 +8,8 @@ import HeroBanner from './HeroBanner';
 export default function Hero() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const { scrollY } = useScroll();
+
+  const { isLoaderDone } = useLoader();
 
   const FADE_TEXT: Variants = {
     show: {
@@ -29,6 +32,12 @@ export default function Hero() {
     }
   });
 
+  const currentAnimationState = !isLoaderDone
+    ? 'hidden'
+    : hasScrolled
+      ? 'hidden'
+      : 'show';
+
   return (
     <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-dvh">
       {/* wrapper max-w */}
@@ -38,7 +47,7 @@ export default function Hero() {
           <motion.h1
             variants={FADE_TEXT}
             initial={'show'}
-            animate={hasScrolled ? 'hidden' : 'show'}
+            animate={currentAnimationState}
             custom={-18}
             className="type-xl flex flex-col gap-y-1 lg:gap-y-2"
           >
@@ -57,7 +66,7 @@ export default function Hero() {
           <motion.p
             variants={FADE_TEXT}
             initial={'show'}
-            animate={hasScrolled ? 'hidden' : 'show'}
+            animate={currentAnimationState}
             custom={18}
             className="type-3xl uppercase [text-align-last:justify]"
           >
