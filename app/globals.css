@@ -35,5 +35,6 @@ body {
 
 button,
 a {
+  cursor: none;
   outline: none;
 }

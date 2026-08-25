@@ -31,7 +31,7 @@ export default function Menu() {
           whileFocus="hover"
           type="button"
           aria-label="Abrir menu"
-          className="type-xl text-primary pointer-events-auto relative cursor-pointer outline-0"
+          className="type-xl text-primary pointer-events-auto relative outline-0"
         >
           <HoverUnderline />
           Menu
@@ -73,7 +73,7 @@ export default function Menu() {
                     whileFocus="hover"
                     type="button"
                     aria-label="Fechar menu"
-                    className="top-base right-base type-xl text-primary absolute! pointer-events-auto cursor-pointer"
+                    className="top-base right-base type-xl text-primary absolute! pointer-events-auto"
                   >
                     <HoverUnderline />
                     Fechar
