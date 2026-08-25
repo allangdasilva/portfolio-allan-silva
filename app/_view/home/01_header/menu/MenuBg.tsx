@@ -1,4 +1,4 @@
-import menuBg from '@/app/images/menu-bg.webp';
+import menuBg from '@/app/_images/menu-bg.webp';
 import Image from 'next/image';
 
 export default function MenuBg() {

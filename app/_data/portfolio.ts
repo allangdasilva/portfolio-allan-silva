@@ -1,6 +1,6 @@
-import dogsMockup from '@/app/images/dogs-dark.webp';
-import kanbanMockup from '@/app/images/kanban-dark.webp';
-import planejaiMockup from '@/app/images/planejai-dark.webp';
+import dogsMockup from '@/app/_images/dogs-dark.webp';
+import kanbanMockup from '@/app/_images/kanban-dark.webp';
+import planejaiMockup from '@/app/_images/planejai-dark.webp';
 import { StaticImageData } from 'next/image';
 
 export interface ImageProps {

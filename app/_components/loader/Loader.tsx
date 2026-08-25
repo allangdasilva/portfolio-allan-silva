@@ -1,7 +1,7 @@
 'use client';
 
 import useLoader from '@/app/_hooks/useLoader';
-import logo from '@/app/images/logo.svg';
+import logo from '@/app/_images/logo.svg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';

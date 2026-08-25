@@ -1,7 +1,7 @@
 import TextBody from '@/app/_components/common/TextBody';
 import TitleSection from '@/app/_components/common/TitleSection';
 import TextFade from '@/app/_components/motion/TextFade';
-import { aboutMeCopy } from '@/app/data/about-me';
+import { aboutMeCopy } from '@/app/_data/about-me';
 
 export default function AboutMe() {
   const copy = aboutMeCopy;

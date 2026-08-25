@@ -1,6 +1,6 @@
 import TitleSection from '@/app/_components/common/TitleSection';
 import TextFade from '@/app/_components/motion/TextFade';
-import { portfolioCopy } from '@/app/data/portfolio';
+import { portfolioCopy } from '@/app/_data/portfolio';
 import PortfolioCard from './PortfolioCard';
 
 export default function Portfolio() {

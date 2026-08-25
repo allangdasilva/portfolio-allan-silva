@@ -2,7 +2,7 @@
 
 import TextBody from '@/app/_components/common/TextBody';
 import TextFade from '@/app/_components/motion/TextFade';
-import { ImageProps } from '@/app/data/portfolio';
+import { ImageProps } from '@/app/_data/portfolio';
 import { motion, useScroll, useTransform } from 'motion/react';
 import Image from 'next/image';
 import React, { useRef } from 'react';

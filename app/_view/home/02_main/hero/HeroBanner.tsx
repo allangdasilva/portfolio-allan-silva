@@ -1,5 +1,5 @@
-import bustBlur from '@/app/images/bust-blur.webp';
-import bust from '@/app/images/bust.webp';
+import bustBlur from '@/app/_images/bust-blur.webp';
+import bust from '@/app/_images/bust.webp';
 import { motion, Variants } from 'motion/react';
 import Image from 'next/image';
 import React from 'react';

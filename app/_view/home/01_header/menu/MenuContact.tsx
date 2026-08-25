@@ -1,6 +1,6 @@
 import { HoverUnderline } from '@/app/_components/common/HoverUnderline';
 import TextFade from '@/app/_components/motion/TextFade';
-import { navContactCopy, navSocialCopy } from '@/app/data/nav';
+import { navContactCopy, navSocialCopy } from '@/app/_data/nav';
 import { motion } from 'motion/react';
 
 export default function MenuContact() {

@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import bannerAllan from '@/app/images/banner-allan-coding.svg';
+import bannerAllan from '@/app/_images/banner-allan-coding.svg';
 
 const BANNER_WIDTH = 1689;
 const GAP_WIDTH = 64;

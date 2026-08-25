@@ -1,6 +1,6 @@
 import TitleSection from '@/app/_components/common/TitleSection';
 import TextFade from '@/app/_components/motion/TextFade';
-import { technologiesCopy } from '@/app/data/technologies';
+import { technologiesCopy } from '@/app/_data/technologies';
 
 export default function Technologies() {
   const copy = technologiesCopy;

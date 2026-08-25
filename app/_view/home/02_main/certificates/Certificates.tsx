@@ -1,6 +1,6 @@
 import TitleSection from '@/app/_components/common/TitleSection';
 import TextFade from '@/app/_components/motion/TextFade';
-import { certificatesCopy } from '@/app/data/certificates';
+import { certificatesCopy } from '@/app/_data/certificates';
 import CertificatesBanner from './CertificatesBanner';
 import CertificatesList from './CertificatesList';
 

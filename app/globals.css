@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-@import './styles/utilities/fonts.css';
-@import './styles/utilities/sizes.css';
+@import './_styles/utilities/fonts.css';
+@import './_styles/utilities/sizes.css';
 
 :root {
   --color-primary: #fafafa;

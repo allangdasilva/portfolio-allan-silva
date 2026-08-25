@@ -1,4 +1,4 @@
-import highlight from '@/app/images/highlight.webp';
+import highlight from '@/app/_images/highlight.webp';
 
 export default function CertificatesBanner({
   ...props

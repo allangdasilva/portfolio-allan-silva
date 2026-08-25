@@ -1,7 +1,7 @@
 'use client';
 
 import AllanCodingLogo from '@/app/_components/svgs/AllanCodingLogoSvg';
-import { footerContactCopy, footerSocialCopy } from '@/app/data/footer';
+import { footerContactCopy, footerSocialCopy } from '@/app/_data/footer';
 import FooterList from './FooterList';
 
 export default function Footer() {
