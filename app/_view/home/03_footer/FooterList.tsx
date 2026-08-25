@@ -23,7 +23,7 @@ export default function FooterList({ copy }: Props) {
             whileFocus="hover"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-fit items-start justify-end gap-x-1 lg:gap-x-2"
+            className="relative flex w-fit items-start justify-end gap-x-1 lg:gap-x-2"
           >
             <HoverUnderline className="-bottom-1 h-px" />
             <span className="type-lg text-primary">{title}</span>

@@ -22,7 +22,7 @@ export default function MenuNav() {
                 whileHover="hover"
                 whileFocus="hover"
                 href={href}
-                className="type-2xl text-primary uppercase"
+                className="type-2xl text-primary relative uppercase"
               >
                 <HoverUnderline />
                 {name}

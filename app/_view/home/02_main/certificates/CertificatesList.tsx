@@ -29,7 +29,7 @@ export default function CertificatesList({ copy, isLeft }: Props) {
           whileHover="hover"
           whileFocus="hover"
           href={href}
-          className={`block max-w-fit ${!isCompleted && 'pointer-events-none opacity-50'}`}
+          className={`relative block max-w-fit ${!isCompleted && 'pointer-events-none opacity-50'}`}
           aria-label={`Baixar certificado de ${title}`}
           download={isCompleted && `Certificado ${title}.pdf`}
         >

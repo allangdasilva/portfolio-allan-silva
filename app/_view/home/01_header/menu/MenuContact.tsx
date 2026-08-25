@@ -19,7 +19,7 @@ export default function MenuContact() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="type-xs text-primary"
+            className="type-xs text-primary relative"
           >
             <HoverUnderline className="h-px" />
             {name}
@@ -41,7 +41,7 @@ export default function MenuContact() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
+            className="relative block"
           >
             <HoverUnderline className="h-px" />
             <Icon className="w-6 lg:w-8" />

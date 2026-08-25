@@ -31,7 +31,7 @@ export default function Menu() {
           whileFocus="hover"
           type="button"
           aria-label="Abrir menu"
-          className="type-xl text-primary pointer-events-auto cursor-pointer outline-0"
+          className="type-xl text-primary pointer-events-auto relative cursor-pointer outline-0"
         >
           <HoverUnderline />
           Menu
