@@ -13,7 +13,7 @@ export default function Technologies() {
         <div className="max-w-component gap-x-base pointer-events-none z-10 col-span-full grid w-full grid-cols-4 lg:row-start-1">
           <div className="col-span-full col-start-3 lg:col-start-1 lg:col-end-6">
             <TextFade direction="up">
-              <TitleSection className="type-base text-secondary pointer-events-auto">
+              <TitleSection className="type-base text-secondary pointer-events-auto w-fit">
                 Tecnologias
               </TitleSection>
             </TextFade>

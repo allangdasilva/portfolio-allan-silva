@@ -1,5 +1,9 @@
+'use client';
+
+import { HoverUnderline } from '@/app/_components/common/HoverUnderline';
 import TextFade from '@/app/_components/motion/TextFade';
 import DownloadSvg from '@/app/_components/svgs/DownloadSvg';
+import { motion } from 'motion/react';
 import React from 'react';
 
 interface Props {
@@ -19,36 +23,39 @@ export default function CertificatesList({ copy, isLeft }: Props) {
       className={`flex flex-col gap-y-3 lg:gap-y-4 ${!isLeft && 'items-end'}`}
     >
       {copy.map(({ hours, title, href, isCompleted }, index) => (
-        <div key={index}>
-          <a
-            href={href}
-            className={`${!isCompleted && 'pointer-events-none opacity-50'}`}
-            aria-label={`Baixar certificado de ${title}`}
-            download={isCompleted && `Certificado ${title}.pdf`}
+        <motion.a
+          key={index}
+          initial="initial"
+          whileHover="hover"
+          whileFocus="hover"
+          href={href}
+          className={`block max-w-fit ${!isCompleted && 'pointer-events-none opacity-50'}`}
+          aria-label={`Baixar certificado de ${title}`}
+          download={isCompleted && `Certificado ${title}.pdf`}
+        >
+          <HoverUnderline className="bg-secondary -bottom-1 h-px" />
+          <div
+            className={`flex items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'}`}
           >
-            <div
-              className={`flex max-w-fit items-start gap-x-1 lg:gap-x-2 ${!isLeft && 'justify-end'}`}
-            >
-              {isLeft ? (
-                // left
-                <React.Fragment>
-                  <span className="text-secondary type-lg">
-                    {hours}h, {title}
-                  </span>
-                  <DownloadSvg />
-                </React.Fragment>
-              ) : (
-                // right
-                <React.Fragment>
-                  <DownloadSvg />
-                  <span className="text-secondary type-lg">
-                    {title}, {hours}h
-                  </span>
-                </React.Fragment>
-              )}
-            </div>
-          </a>
-        </div>
+            {isLeft ? (
+              // left
+              <React.Fragment>
+                <span className="text-secondary type-lg">
+                  {hours}h, {title}
+                </span>
+                <DownloadSvg />
+              </React.Fragment>
+            ) : (
+              // right
+              <React.Fragment>
+                <DownloadSvg />
+                <span className="text-secondary type-lg">
+                  {title}, {hours}h
+                </span>
+              </React.Fragment>
+            )}
+          </div>
+        </motion.a>
       ))}
     </TextFade>
   );

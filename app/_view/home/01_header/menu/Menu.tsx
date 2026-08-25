@@ -1,5 +1,6 @@
 'use client';
 
+import { HoverUnderline } from '@/app/_components/common/HoverUnderline';
 import * as Dialog from '@radix-ui/react-dialog';
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import { useState } from 'react';
@@ -24,13 +25,17 @@ export default function Menu() {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <button
+        <motion.button
+          initial="initial"
+          whileHover="hover"
+          whileFocus="hover"
           type="button"
           aria-label="Abrir menu"
-          className="type-xl text-primary pointer-events-auto cursor-pointer"
+          className="type-xl text-primary pointer-events-auto cursor-pointer outline-0"
         >
+          <HoverUnderline />
           Menu
-        </button>
+        </motion.button>
       </Dialog.Trigger>
 
       <AnimatePresence>
@@ -61,14 +66,18 @@ export default function Menu() {
                 </Dialog.Title>
 
                 {/* close button */}
-                <Dialog.Close asChild className="top-base right-base absolute">
-                  <button
+                <Dialog.Close asChild>
+                  <motion.button
+                    initial="initial"
+                    whileHover="hover"
+                    whileFocus="hover"
                     type="button"
                     aria-label="Fechar menu"
-                    className="type-xl text-primary pointer-events-auto cursor-pointer"
+                    className="top-base right-base type-xl text-primary absolute! pointer-events-auto cursor-pointer"
                   >
+                    <HoverUnderline />
                     Fechar
-                  </button>
+                  </motion.button>
                 </Dialog.Close>
 
                 {/* bg */}

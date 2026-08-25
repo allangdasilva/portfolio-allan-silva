@@ -1,6 +1,8 @@
+import { HoverUnderline } from '@/app/_components/common/HoverUnderline';
 import TextFade from '@/app/_components/motion/TextFade';
 import { navHashCopy } from '@/app/data/nav';
 import * as Dialog from '@radix-ui/react-dialog';
+import { motion } from 'motion/react';
 
 export default function MenuNav() {
   const copy = navHashCopy;
@@ -15,9 +17,16 @@ export default function MenuNav() {
         {copy.map(({ name, href }, index) => (
           <div key={index}>
             <Dialog.Close asChild>
-              <a href={href} className="type-2xl text-primary uppercase">
+              <motion.a
+                initial="initial"
+                whileHover="hover"
+                whileFocus="hover"
+                href={href}
+                className="type-2xl text-primary uppercase"
+              >
+                <HoverUnderline />
                 {name}
-              </a>
+              </motion.a>
             </Dialog.Close>
           </div>
         ))}
