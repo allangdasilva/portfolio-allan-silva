@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Outfit, STIX_Two_Text } from 'next/font/google';
+import SmoothScrolling from './_providers/SmoothScrolling';
 import './globals.css';
 
 const outfitSans = Outfit({
@@ -26,7 +27,9 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       lang="pt-BR"
       className={`${outfitSans.variable} ${stixTwoTextSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <SmoothScrolling>{children}</SmoothScrolling>
+      </body>
     </html>
   );
 }
