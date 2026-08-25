@@ -44,7 +44,7 @@ export default function PortfolioCard({ card, isLast }: Props) {
       {/* target */}
       <div
         ref={targetRef}
-        className="pointer-events-none invisible mb-[-100dvh] h-dvh w-full"
+        className="pointer-events-none invisible mb-[-100svh] min-h-svh w-full"
         aria-hidden="true"
       ></div>
 
@@ -52,7 +52,7 @@ export default function PortfolioCard({ card, isLast }: Props) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-base sticky top-0 block h-dvh w-full py-12"
+        className="px-base sticky top-0 block min-h-svh w-full py-12"
       >
         {/* background */}
         <div className="absolute inset-0 z-10">

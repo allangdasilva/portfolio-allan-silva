@@ -39,7 +39,7 @@ export default function Hero() {
       : 'show';
 
   return (
-    <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-dvh">
+    <section className="text-primary p-base bg-tertiary sticky top-0 flex min-h-svh">
       {/* wrapper max-w */}
       <div className="max-w-component relative flex w-full flex-1 flex-col justify-between">
         {/* header */}

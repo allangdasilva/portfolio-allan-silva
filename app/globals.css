@@ -28,7 +28,7 @@
 }
 
 body {
-  background: var(--color-primary);
+  background: var(--color-tertiary);
   color: var(--color-secondary);
   font-family: var(--font-outfit-sans), sans-serif;
 }
