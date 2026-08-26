@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       lang="pt-BR"
       className={`${outfitSans.variable} ${stixTwoTextSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full cursor-none flex-col">
+      <body className="no-scrollbar flex min-h-full cursor-none flex-col">
         <SmoothScrolling>{children}</SmoothScrolling>
         <CustomCursor />
       </body>

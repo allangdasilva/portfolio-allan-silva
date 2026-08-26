@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import './_styles/utilities/fonts.css';
-@import './_styles/utilities/sizes.css';
+@import './_styles/utilities/utils.css';
 
 :root {
   --color-primary: #fafafa;
@@ -33,6 +33,17 @@ body {
   background: var(--color-tertiary);
   color: var(--color-secondary);
   font-family: var(--font-outfit-sans), sans-serif;
+}
+
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button,
