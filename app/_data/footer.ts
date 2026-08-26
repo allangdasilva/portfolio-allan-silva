@@ -4,7 +4,7 @@ import YoutubeSvg from '../_components/svgs/Youtube';
 
 export const footerContactCopy = [
   {
-    href: 'mailto:allandasilva33@outlook.com',
+    href: 'mailto:allangdasilva.contact@gmail.com',
     title: 'Email',
   },
   {

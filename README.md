@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Allan Silva — Front-End Developer & UX/UI Designer
 
-## Getting Started
+Portfólio pessoal de Allan Silva, desenvolvido para apresentar projetos, experiências e tecnologias com uma interface autoral, objetiva e responsiva.
 
-First, run the development server:
+## Visão geral
+
+Este projeto reúne desenvolvimento front-end e design de interfaces em uma experiência de página única. A estrutura prioriza navegação fluida, hierarquia visual e apresentação clara dos trabalhos realizados.
+
+## Destaques
+
+- Layout responsivo com identidade visual própria;
+- Animações com respeito à preferência de movimento do usuário;
+- Rolagem suave e cursor personalizado;
+- Seções de apresentação, projetos, tecnologias e certificados;
+- Componentes organizados por responsabilidade dentro do App Router.
+
+## Projetos em destaque
+
+- **Dogs** Rede social para compartilhamento de fotos de cachorros. [Ver projeto](https://react-dogs-steel.vercel.app/)
+- **Planejai** Aplicação para planejamento financeiro e simulação de metas. [Ver projeto](https://planejai-three.vercel.app/)
+- **Kanban** Quadro interativo para organização e acompanhamento de tarefas. [Ver projeto](https://react-kanban-app-seven.vercel.app/) |
+
+## Tecnologias
+
+- Next.js 16 e React 19
+- TypeScript
+- Tailwind CSS
+- Motion
+- Lenis
+- Radix UI
+- Figma
+
+## Como executar
+
+### Pré-requisitos
+
+- Node.js 20+
+- pnpm
+
+### Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Outros comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm lint
+pnpm build
+pnpm start
+```
 
-## Learn More
+## Links
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [LinkedIn](https://www.linkedin.com/in/allangdasilva/)
+- [GitHub](https://github.com/allangdasilva)
+- [YouTube](https://www.youtube.com/channel/UCzcRdgkUetDZpXMMsVGZA3Q)
+- [WhatsApp](https://wa.me/5511976447685)
+- [E-mail](mailto:allangdasilva.contact@gmail.com)

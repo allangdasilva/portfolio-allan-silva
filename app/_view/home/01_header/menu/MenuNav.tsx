@@ -1,6 +1,6 @@
 import { HoverUnderline } from '@/app/_components/common/HoverUnderline';
 import TextFade from '@/app/_components/motion/TextFade';
-import { navHashCopy } from '@/app/_data/nav';
+import { navHashCopy } from '@/app/_data/menu';
 import * as Dialog from '@radix-ui/react-dialog';
 import { motion } from 'motion/react';
 

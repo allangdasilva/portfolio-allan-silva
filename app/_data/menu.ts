@@ -10,7 +10,10 @@ export const navHashCopy = [
 ];
 
 export const navContactCopy = [
-  { name: 'allang.hello@gmail.com', href: 'mailto:allandasilva33@outlook.com' },
+  {
+    name: 'allangdasilva.contact@gmail.com',
+    href: 'mailto:allangdasilva.contact@gmail.com',
+  },
   { name: '+55 11 9 7644 7685', href: 'https://wa.me/5511976447685' },
 ];
 
