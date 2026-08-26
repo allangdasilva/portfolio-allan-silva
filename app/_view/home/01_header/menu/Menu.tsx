@@ -24,19 +24,21 @@ export default function Menu() {
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger asChild>
-        <motion.button
-          initial="initial"
-          whileHover="hover"
-          whileFocus="hover"
-          type="button"
-          aria-label="Abrir menu"
-          className="type-xl text-primary pointer-events-auto relative outline-0"
-        >
-          <HoverUnderline />
-          Menu
-        </motion.button>
-      </Dialog.Trigger>
+      {!open && (
+        <Dialog.Trigger asChild>
+          <motion.button
+            initial="initial"
+            whileHover="hover"
+            whileFocus="hover"
+            type="button"
+            aria-label="Abrir menu"
+            className="type-xl text-primary pointer-events-auto relative outline-0"
+          >
+            <HoverUnderline />
+            Menu
+          </motion.button>
+        </Dialog.Trigger>
+      )}
 
       <AnimatePresence>
         {open && (

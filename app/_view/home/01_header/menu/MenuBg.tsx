@@ -13,6 +13,7 @@ export default function MenuBg() {
         className="h-full w-full object-cover"
         width={1919}
         height={1080}
+        loading="lazy"
       />
     </div>
   );
