@@ -48,7 +48,7 @@ export default function Menu() {
                 initial={'hidden'}
                 exit={'hidden'}
                 animate={open ? 'show' : 'hidden'}
-                className="fixed inset-0 z-40 bg-[#12042F]"
+                className="bg-quaternary fixed inset-0 z-40"
               ></motion.div>
             </Dialog.Overlay>
 

@@ -11,7 +11,7 @@ export default function CertificatesBanner({
         className="w-8/10 relative z-20 aspect-video bg-contain"
       ></div>
       {/* second image */}
-      <div className="max-h-4/10 absolute inset-0 top-1/2 z-10 -translate-y-1/2 bg-[#1f0c46]"></div>
+      <div className="max-h-4/10 bg-quaternary absolute inset-0 top-1/2 z-10 -translate-y-1/2"></div>
     </div>
   );
 }
